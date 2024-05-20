@@ -1,0 +1,62 @@
+[
+  {
+    "name": "The Appian Way",
+    "cost": {"wood": 0, "clay": 2, "stone": 2, "glass": 0, "papyrus": 1, "coin": 0},
+    "effect": {"vp": 3, "coin": 3, "action": ["discard_3x_coin", "repeat"]}
+  },
+  {
+    "name": "Circus Maximus",
+    "cost": {"wood": 1, "clay": 0, "stone": 2, "glass": 1, "papyrus": 0, "coin": 0},
+    "effect": {"vp": 3, "military": 1, "action": "discard_manufactured_goods"}
+  },
+  {
+    "name": "The Colossus",
+    "cost": {"wood": 0, "clay": 3, "stone": 0, "glass": 1, "papyrus": 0, "coin": 0},
+    "effect": {"vp": 3, "military": 2}
+  },
+  {
+    "name": "The Great Library",
+    "cost": {"wood": 3, "clay": 0, "stone": 0, "glass": 1, "papyrus": 1, "coin": 0},
+    "effect": {"vp": 4, "action": "pick_a_progress"}
+  },
+  {
+    "name": "The Great Lighthouse",
+    "cost": {"wood": 1, "clay": 0, "stone": 1, "glass": 0, "papyrus": 2, "coin": 0},
+    "effect": {"vp": 4, "action": "wood|clay|stone"}
+  },
+  {
+    "name": "The Hanging Gardens",
+    "cost": {"wood": 2, "clay": 0, "stone": 0, "glass": 1, "papyrus": 1, "coin": 0},
+    "effect": {"vp": 3, "coin": 6 ,"action": "repeat"}
+  },
+  {
+    "name": "The Mausoleum",
+    "cost": {"wood": 0, "clay": 2, "stone": 0, "glass": 2, "papyrus": 1, "coin": 0},
+    "effect": {"vp": 2, "action": "pick_a_discard"}
+  },
+  {
+    "name": "Piraeus",
+    "cost": {"wood": 2, "clay": 1, "stone": 1, "glass": 0, "papyrus": 0, "coin": 0},
+    "effect": {"vp": 2, "action": ["glass|papyrus", "repeat"]}
+  },
+  {
+    "name": "The Pyramids",
+    "cost": {"wood": 0, "clay": 0, "stone": 3, "glass": 0, "papyrus": 1, "coin": 0},
+    "effect": {"vp": 9}
+  },
+  {
+    "name": "The Sphinx",
+    "cost": {"wood": 0, "clay": 1, "stone": 1, "glass": 2, "papyrus": 0, "coin": 0},
+    "effect": {"vp": 6, "action": "repeat"}
+  },
+  {
+    "name": "The Statue of Zeus",
+    "cost": {"wood": 1, "clay": 1, "stone": 1, "glass": 0, "papyrus": 2, "coin": 0},
+    "effect": {"vp": 3, "military": 1, "action": "discard_raw_materials"}
+  },
+  {
+    "name": "The Temple of Artemis",
+    "cost": {"wood": 1, "clay": 0, "stone": 1, "glass": 1, "papyrus": 1, "coin": 0},
+    "effect": {"coin": 12, "action": "repeat"}
+  }
+]

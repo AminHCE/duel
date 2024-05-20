@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Agriculture",
+    "effect": {"vp": 4, "coin": 6}
+  },
+  {
+    "name": "Architecture",
+    "effect": {"action": "2x_less_wonder_cost"}
+  },
+  {
+    "name": "Economy",
+    "effect": {"action": "gain_money"}
+  },
+  {
+    "name": "Law",
+    "effect": {"science": "law"}
+  },
+  {
+    "name": "Masonry",
+    "effect": {"action": "2x_less_civilian_cost"}
+  },
+  {
+    "name": "Mathematics",
+    "effect": {"action": "3x_vp_progress"}
+  },
+  {
+    "name": "Philosophy",
+    "effect": {"vp": 7}
+  },
+  {
+    "name": "Strategy",
+    "effect": {"action": "extera_military"}
+  },
+  {
+    "name": "Theology",
+    "effect": {"action": "add_repeat_wonder"}
+  },
+  {
+    "name": "Urbanism",
+    "effect": {"coin": 6,"action": "4x_coin_chain"}
+  }
+]

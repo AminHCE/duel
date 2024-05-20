@@ -1,0 +1,538 @@
+{
+  "age_one": [
+    {
+      "name": "LUMBER YARD",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"wood": 1},
+      "kind": "raw_materials",
+      "age": 1
+    },
+    {
+      "name": "LOGGING CAMP",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 1},
+      "effect": {"wood": 1},
+      "kind": "raw_materials",
+      "age": 1
+    },
+    {
+      "name": "CLAY POOL",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"clay": 1},
+      "kind": "raw_materials",
+      "age": 1
+    },
+    {
+      "name": "CLAY PIT",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 1},
+      "effect": {"clay": 1},
+      "kind": "raw_materials",
+      "age": 1
+    },
+    {
+      "name": "QUARRY",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"stone": 1},
+      "kind": "raw_materials",
+      "age": 1
+    },
+    {
+      "name": "STONE PIT",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 1},
+      "effect": {"stone": 1},
+      "kind": "raw_materials",
+      "age": 1
+    },
+    {
+      "name": "GLASSWORKS",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 1},
+      "effect": {"glass": 1},
+      "kind": "manufactured_goods",
+      "age": 1
+    },
+    {
+      "name": "PRESS",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 1},
+      "effect": {"papyrus": 1},
+      "kind": "manufactured_goods",
+      "age": 1
+    },
+    {
+      "name": "GUARD TOWER",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"military": 1},
+      "kind": "military",
+      "age": 1
+    },
+    {
+      "name": "WORKSHOP",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 1, "coin": 0},
+      "effect": {"science": "surface", "vp": 1},
+      "kind": "scientific",
+      "age": 1
+    },
+    {
+      "name": "APOTHECARY",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 1, "papyrus": 0, "coin": 0},
+      "effect": {"science": "wheel", "vp": 1},
+      "kind": "scientific",
+      "age": 1
+    },
+    {
+      "name": "STONE RESERVE",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 3},
+      "effect": {"action": "stone_cost_set_one"},
+      "kind": "commercial",
+      "age": 1
+    },
+    {
+      "name": "CLAY RESERVE",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 3},
+      "effect": {"action": "clay_cost_set_one"},
+      "kind": "commercial",
+      "age": 1
+    },
+    {
+      "name": "WOOD RESERVE",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 3},
+      "effect": {"action": "wood_cost_set_one"},
+      "kind": "commercial",
+      "age": 1
+    },
+    {
+      "name": "STABLE",
+      "cost": {"wood": 1, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"military": 1, "action": "military_plate"},
+      "kind": "military",
+      "age": 1
+    },
+    {
+      "name": "GARRISON",
+      "cost": {"wood": 0, "clay": 1, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"military": 1, "action": "military_sword"},
+      "kind": "military",
+      "age": 1
+    },
+    {
+      "name": "PALISADE",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 2},
+      "effect": {"military": 1, "action": "military_fort"},
+      "kind": "military",
+      "age": 1
+    },
+    {
+      "name": "SCRIPTORIUM",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 2},
+      "effect": {"science": "inkwell", "action": "science_book"},
+      "kind": "scientific",
+      "age": 1
+    },
+    {
+      "name": "PHARMACIST",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 2},
+      "effect": {"science": "chemistry", "action": "science_gear"},
+      "kind": "scientific",
+      "age": 1
+    },
+    {
+      "name": "THEATER",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"vp": 3, "action": "civil_mask"},
+      "kind": "civilian",
+      "age": 1
+    },
+    {
+      "name": "ALTAR",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"vp": 3, "action": "civil_moon"},
+      "kind": "civilian",
+      "age": 1
+    },
+    {
+      "name": "BATHS",
+      "cost": {"wood": 0, "clay": 0, "stone": 1, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"vp": 3, "action": "civil_drop"},
+      "kind": "civilian",
+      "age": 1
+    },
+    {
+      "name": "TAVERN",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"coin": 4, "action": "commercial_pitcher"},
+      "kind": "commercial",
+      "age": 1
+    }
+  ],
+  "age_two": [
+    {
+      "name": "SAWMILL",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 2},
+      "effect": {"wood": 2},
+      "kind": "raw_materials",
+      "age": 2
+    },
+    {
+      "name": "BRICKYARD",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 2},
+      "effect": {"clay": 2},
+      "kind": "raw_materials",
+      "age": 2
+    },
+    {
+      "name": "SHELF QUARRY",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 2},
+      "effect": {"stone": 2},
+      "kind": "raw_materials",
+      "age": 2
+    },
+    {
+      "name": "GLASS-BLOWER",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"glass": 1},
+      "kind": "manufactured_goods",
+      "age": 2
+    },
+    {
+      "name": "DRYING ROOM",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"papyrus": 1},
+      "kind": "manufactured_goods",
+      "age": 2
+    },
+    {
+      "name": "WALLS",
+      "cost": {"wood": 0, "clay": 0, "stone": 2, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"military": 2},
+      "kind": "military",
+      "age": 2
+    },
+    {
+      "name": "FORUM",
+      "cost": {"wood": 0, "clay": 1, "stone": 0, "glass": 0, "papyrus": 0, "coin": 3},
+      "effect": {"action": "glass|papyrus"},
+      "kind": "commercial",
+      "age": 2
+    },
+    {
+      "name": "CARAVANSERY",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 1, "papyrus": 1, "coin": 2},
+      "effect": {"action": "wood|clay|stone"},
+      "kind": "commercial",
+      "age": 2
+    },
+    {
+      "name": "CUSTOMS HOUSE",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 4},
+      "effect": {"action": ["glass_cost_set_one", "papyrus_cost_set_one"]},
+      "kind": "commercial",
+      "age": 2
+    },
+    {
+      "name": "COURTHOUSE",
+      "cost": {"wood": 2, "clay": 0, "stone": 0, "glass": 1, "papyrus": 0, "coin": 0},
+      "effect": {"vp": 5},
+      "kind": "civilian",
+      "age": 2
+    },
+    {
+      "name": "HORSE BREEDERS",
+      "cost": {"wood": 1, "clay": 1, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "chain": "military_plate",
+      "effect": {"military": 1},
+      "kind": "military",
+      "age": 2
+    },
+    {
+      "name": "BARRACKS",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 3},
+      "chain": "military_sword",
+      "effect": {"military": 1},
+      "kind": "military",
+      "age": 2
+    },
+    {
+      "name": "ARCHERY RANGE",
+      "cost": {"wood": 1, "clay": 0, "stone": 1, "glass": 0, "papyrus": 1, "coin": 0},
+      "effect": {"military": 2, "action": "military_target"},
+      "kind": "military",
+      "age": 2
+    },
+    {
+      "name": "PARADE GROUND",
+      "cost": {"wood": 0, "clay": 2, "stone": 0, "glass": 1, "papyrus": 0, "coin": 0},
+      "effect": {"military": 2, "action": "military_helmet"},
+      "kind": "military",
+      "age": 2
+    },
+    {
+      "name": "LIBRARY",
+      "cost": {"wood": 1, "clay": 0, "stone": 1, "glass": 1, "papyrus": 0, "coin": 0},
+      "chain": "science_book",
+      "effect": {"science": "inkwell", "vp": 2},
+      "kind": "scientific",
+      "age": 2
+    },
+    {
+      "name": "DISPENSARY",
+      "cost": {"wood": 0, "clay": 2, "stone": 1, "glass": 0, "papyrus": 0, "coin": 0},
+      "chain": "science_gear",
+      "effect": {"science": "chemistry", "vp": 2},
+      "kind": "scientific",
+      "age": 2
+    },
+    {
+      "name": "SCHOOL",
+      "cost": {"wood": 1, "clay": 0, "stone": 0, "glass": 0, "papyrus": 2, "coin": 0},
+      "effect": {"science": "wheel", "vp": 1, "action": "science_harp"},
+      "kind": "scientific",
+      "age": 2
+    },
+    {
+      "name": "LABORATORY",
+      "cost": {"wood": 1, "clay": 0, "stone": 0, "glass": 2, "papyrus": 0, "coin": 0},
+      "effect": {"science": "surface", "vp": 1, "action": "science_teapot"},
+      "kind": "scientific",
+      "age": 2
+    },
+    {
+      "name": "STATUE",
+      "cost": {"wood": 0, "clay": 2, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "chain": "civil_mask",
+      "effect": {"vp": 4, "action": "civil_column"},
+      "kind": "civilian",
+      "age": 2
+    },
+    {
+      "name": "TEMPLE",
+      "cost": {"wood": 1, "clay": 0, "stone": 0, "glass": 0, "papyrus": 1, "coin": 0},
+      "chain": "civil_moon",
+      "effect": {"vp": 4, "action": "civil_sun"},
+      "kind": "civilian",
+      "age": 2
+    },
+    {
+      "name": "AQUEDUCT",
+      "cost": {"wood": 0, "clay": 0, "stone": 3, "glass": 0, "papyrus": 0, "coin": 0},
+      "chain": "civil_drop",
+      "effect": {"vp": 5},
+      "kind": "civilian",
+      "age": 2
+    },
+    {
+      "name": "ROSTRUM",
+      "cost": {"wood": 1, "clay": 0, "stone": 1, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"vp": 4, "action": "civil_temple"},
+      "kind": "civilian",
+      "age": 2
+    },
+    {
+      "name": "BREWERY",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"coin": 6, "action": "commercial_barrel"},
+      "kind": "commercial",
+      "age": 2
+    }
+  ],
+  "age_three": [
+    {
+      "name": "ARSENAL",
+      "cost": {"wood": 2, "clay": 3, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"military": 3},
+      "kind": "military",
+      "age": 3
+    },
+    {
+      "name": "PRETORIUM",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 0, "coin": 8},
+      "effect": {"military": 3},
+      "kind": "military",
+      "age": 3
+    },
+    {
+      "name": "ACADEMY",
+      "cost": {"wood": 1, "clay": 0, "stone": 1, "glass": 2, "papyrus": 0, "coin": 0},
+      "effect": {"science": "clock", "vp": 3},
+      "kind": "scientific",
+      "age": 3
+    },
+    {
+      "name": "STUDY",
+      "cost": {"wood": 2, "clay": 0, "stone": 0, "glass": 1, "papyrus": 1, "coin": 0},
+      "effect": {"science": "clock", "vp": 3},
+      "kind": "scientific",
+      "age": 3
+    },
+    {
+      "name": "CHAMBER OF COMMERCE",
+      "cost": {"wood": 0, "clay": 0, "stone": 0, "glass": 0, "papyrus": 2, "coin": 0},
+      "effect": {"vp": 3, "action": "3x_coin_manufactured_goods"},
+      "kind": "commercial",
+      "age": 3
+    },
+    {
+      "name": "PORT",
+      "cost": {"wood": 1, "clay": 0, "stone": 0, "glass": 1, "papyrus": 1, "coin": 0},
+      "effect": {"vp": 3, "action": "2x_coin_raw_materials"},
+      "kind": "commercial",
+      "age": 3
+    },
+    {
+      "name": "ARMORY",
+      "cost": {"wood": 0, "clay": 0, "stone": 2, "glass": 1, "papyrus": 0, "coin": 0},
+      "effect": {"vp": 3, "action": "1x_coin_military"},
+      "kind": "commercial",
+      "age": 3
+    },
+    {
+      "name": "PALACE",
+      "cost": {"wood": 1, "clay": 1, "stone": 1, "glass": 2, "papyrus": 0, "coin": 0},
+      "effect": {"vp": 7},
+      "kind": "civilian",
+      "age": 3
+    },
+    {
+      "name": "TOWN HALL",
+      "cost": {"wood": 2, "clay": 0, "stone": 3, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"vp": 7},
+      "kind": "civilian",
+      "age": 3
+    },
+    {
+      "name": "OBELISK",
+      "cost": {"wood": 0, "clay": 0, "stone": 2, "glass": 1, "papyrus": 0, "coin": 0},
+      "effect": {"vp": 5},
+      "kind": "civilian",
+      "age": 3
+    },
+    {
+      "name": "FORTIFICATIONS",
+      "cost": {"wood": 0, "clay": 1, "stone": 2, "glass": 0, "papyrus": 1, "coin": 0},
+      "chain": "military_fort",
+      "effect": {"military": 2},
+      "kind": "military",
+      "age": 3
+    },
+    {
+      "name": "SIEGE WORKSHOP",
+      "cost": {"wood": 3, "clay": 0, "stone": 0, "glass": 1, "papyrus": 0, "coin": 0},
+      "chain": "military_target",
+      "effect": {"military": 2},
+      "kind": "military",
+      "age": 3
+    },
+    {
+      "name": "CIRCUS",
+      "cost": {"wood": 0, "clay": 2, "stone": 2, "glass": 0, "papyrus": 0, "coin": 0},
+      "chain": "military_helmet",
+      "effect": {"military": 2},
+      "kind": "military",
+      "age": 3
+    },
+    {
+      "name": "UNIVERSITY",
+      "cost": {"wood": 0, "clay": 1, "stone": 0, "glass": 1, "papyrus": 1, "coin": 0},
+      "chain": "science_harp",
+      "effect": {"science": "astrolabes", "vp": 2},
+      "kind": "scientific",
+      "age": 3
+    },
+    {
+      "name": "OBSERVATORY",
+      "cost": {"wood": 0, "clay": 0, "stone": 1, "glass": 0, "papyrus": 2, "coin": 0},
+      "chain": "science_teapot",
+      "effect": {"science": "astrolabes", "vp": 2},
+      "kind": "scientific",
+      "age": 3
+    },
+    {
+      "name": "GARDENS",
+      "cost": {"wood": 2, "clay": 2, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "chain": "civil_column",
+      "effect": {"vp": 6},
+      "kind": "civilian",
+      "age": 3
+    },
+    {
+      "name": "PANTHEON",
+      "cost": {"wood": 1, "clay": 1, "stone": 0, "glass": 0, "papyrus": 2, "coin": 0},
+      "chain": "civil_sun",
+      "effect": {"vp": 6},
+      "kind": "civilian",
+      "age": 3
+    },
+    {
+      "name": "SENATE",
+      "cost": {"wood": 0, "clay": 2, "stone": 1, "glass": 0, "papyrus": 1, "coin": 0},
+      "chain": "civil_temple",
+      "effect": {"vp": 5},
+      "kind": "civilian",
+      "age": 3
+    },
+    {
+      "name": "LIGHTHOUSE",
+      "cost": {"wood": 0, "clay": 2, "stone": 0, "glass": 1, "papyrus": 0, "coin": 0},
+      "chain": "commercial_pitcher",
+      "effect": {"vp": 3, "action": "1x_coin_commercial"},
+      "kind": "commercial",
+      "age": 3
+    },
+    {
+      "name": "ARENA",
+      "cost": {"wood": 1, "clay": 1, "stone": 1, "glass": 0, "papyrus": 0, "coin": 0},
+      "chain": "commercial_barrel",
+      "effect": {"vp": 3, "action": "2x_coin_wonder"},
+      "kind": "commercial",
+      "age": 3
+    }
+  ],
+  "guild": [
+    {
+      "name": "MERCHANTS GUILD",
+      "cost": {"wood": 1, "clay": 1, "stone": 0, "glass": 1, "papyrus": 1, "coin": 0},
+      "effect": {"action": ["1x_coin_top_commercial", "1x_vp_top_commercial"]},
+      "kind": "guild",
+      "age": 3
+    },
+    {
+      "name": "SHIPOWNERS GUILD",
+      "cost": {"wood": 0, "clay": 1, "stone": 1, "glass": 1, "papyrus": 1, "coin": 0},
+      "effect": {"action": ["1x_coin_top_recourse", "1x_vp_top_recourse"]},
+      "kind": "guild",
+      "age": 3
+    },
+    {
+      "name": "BUILDERS GUILD",
+      "cost": {"wood": 1, "clay": 1, "stone": 2, "glass": 1, "papyrus": 0, "coin": 0},
+      "effect": {"action": "2x_vp_top_wonder"},
+      "kind": "guild",
+      "age": 3
+    },
+    {
+      "name": "MAGISTRATES GUILD",
+      "cost": {"wood": 2, "clay": 1, "stone": 0, "glass": 0, "papyrus": 1, "coin": 0},
+      "effect": {"action": ["1x_coin_top_civilian", "1x_vp_top_civilian"]},
+      "kind": "guild",
+      "age": 3
+    },
+    {
+      "name": "SCIENTISTS GUILD",
+      "cost": {"wood": 2, "clay": 2, "stone": 0, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"action": ["1x_coin_top_scientific", "1x_vp_top_scientific"]},
+      "kind": "guild",
+      "age": 3
+    },
+    {
+      "name": "MONEYLENDERS GUILD",
+      "cost": {"wood": 2, "clay": 0, "stone": 2, "glass": 0, "papyrus": 0, "coin": 0},
+      "effect": {"action": "1x_vp_top_coin"},
+      "kind": "guild",
+      "age": 3
+    },
+    {
+      "name": "TACTICIANS GUILD",
+      "cost": {"wood": 0, "clay": 1, "stone": 2, "glass": 0, "papyrus": 1, "coin": 0},
+      "effect": {"action": ["1x_coin_top_military", "1x_vp_top_military"]},
+      "kind": "guild",
+      "age": 3
+    }
+  ]
+}
