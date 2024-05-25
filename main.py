@@ -1,4 +1,5 @@
 import json
+import random
 
 
 class Wonder:
@@ -110,48 +111,139 @@ class Player:
             print('you can\'t pick this card')
 
 
+class Age:
+    def __init__(self):
+        self.placements = {
+            'age_one': [
+                [1, 1, 0, 0, 0, 0],
+                [1, 1, 1, 0, 0, 0],
+                [1, 1, 1, 1, 0, 0],
+                [1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 1, 1],
+                [0, 0, 0, 0, 0, 0],
+            ],
+            'age_two': [
+                [1, 1, 1, 1, 1, 1],
+                [0, 1, 1, 1, 1, 1],
+                [0, 0, 1, 1, 1, 1],
+                [0, 0, 0, 1, 1, 1],
+                [0, 0, 0, 0, 1, 1],
+                [0, 0, 0, 0, 0, 0],
+            ],
+            'age_three': [
+                [1, 1, 0, 0],
+                [1, 1, 1, 0],
+                [1, 1, 1, 1],
+                [1, 2, 0, 1],
+                [1, 1, 1, 1],
+                [0, 1, 1, 1],
+                [0, 0, 1, 1],
+                [0, 0, 0, 0],
+            ]
+        }
+
+        self.card_position = list()
+
+    def position(self, age):
+        with open('cards.json') as f:
+            cards_dict = json.load(f)
+            cards = cards_dict[f'age_{age}']
+            age_cards = []
+            for c in cards:
+                card = Card(c['name'], c['age'], c['cost'], c['effect'], c['kind'], c['chain'] if 'chain' in c else None)
+                age_cards.append(card)
+
+        numbers = list(range(23))
+        random.shuffle(numbers)
+
+        index = 0
+        for idx, x in enumerate(self.placements[f'age_{age}']):
+            row_position = list()
+            for idy, y in enumerate(x):
+                single_position = {
+                    "index": index if y == 1 else None,
+                    "card": age_cards[index] if y == 1 else None,
+                    "has_card": y,
+                    "visible": True if idx % 2 == 0 else False
+                }
+                index += 1 if y == 1 else 0
+                row_position.append(single_position)
+            self.card_position.append(row_position)
+
+    def available_position(self):
+        available_card = list()
+        max_x_len = len(self.card_position) - 1
+        max_y_len = len(self.card_position[0]) - 1
+        for idx, x in enumerate(self.card_position):
+            for idy, y in enumerate(x):
+                pointer = self.card_position[idx][idy]['has_card']
+                pointer_down = self.card_position[min(idx+1, max_x_len)][idy]['has_card']
+                pointer_down_right = self.card_position[min(idx+1, max_x_len)][min(idy+1, max_y_len)]['has_card']
+
+                if pointer > pointer_down + pointer_down_right:
+                    if self.card_position[idx][idy]['has_card'] == 1:
+                        self.card_position[idx][idy]['visible'] = True
+                        available_card.append(self.card_position[idx][idy])
+                    elif self.card_position[idx][idy]['has_card'] == 2:
+                        self.card_position[idx][idy]['has_card'] = 0
+
+        return available_card
+
+    def remained_position(self):
+        remained = 0
+        for idx, x in enumerate(self.card_position):
+            for idy, y in enumerate(x):
+                if y['has_card'] == 1:
+                    remained += 1
+
+        return remained
+
+    def pick_card(self, index):
+        if any(d['index'] == index for d in self.available_position()):
+            for idx, x in enumerate(self.card_position):
+                for idy, y in enumerate(x):
+                    if y['index'] == index:
+                        self.card_position[idx][idy]['card'] = None
+                        self.card_position[idx][idy]['has_card'] = 0
+                        break
+        else:
+            print('pick wrong number!')
+
+
+def run():
+    age = Age()
+    age.position('two')
+    for turn in range(20):
+        print(age.available_position())
+        print(age.remained_position())
+        index = input("enter an index: ")
+        age.pick_card(int(index))
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     player1 = Player()
     # print(player1.vp)
     # print(player1.count_vp())
 
-    with open('cards.json') as f:
-        cards = json.load(f)
-        age_one_cards = cards['age_one']
-        age_one = []
-        for c in age_one_cards:
-            card0 = Card(c['name'], c['age'], c['cost'], c['effect'], c['kind'], c['chain'] if 'chain' in c else None)
-            age_one.append(card0)
-            # print(card.chain)
-
-    with open('cards.json') as f:
-        cards = json.load(f)
-        age_two_cards = cards['age_three']
-        age_two = []
-        for c in age_two_cards:
-            card0 = Card(c['name'], c['age'], c['cost'], c['effect'], c['kind'], c['chain'] if 'chain' in c else None)
-            age_two.append(card0)
-            # print(card.chain)
-
-    player2 = Player()
-    test_card = age_one[2]
-    print(age_two[10].cost)
-    print(age_two[10].chain)
-    print('-----', player1.pick_card(age_one[3], player2))
-    print('-----', player1.pick_card(age_one[6], player2))
-    print('-----', player1.pick_card(age_one[12], player2))
-    print('-----', player1.pick_card(age_one[16], player2))
-    print('-----', player1.pick_card(age_one[9], player2))
-    print('-----', player1.pick_card(age_two[10], player2))
-    # print('-----', player1.pick_card(test_card, player2))
-
-    print('Player1 -> coin:', player1.coin)
-    print('Player1 -> military:', player1.military)
-    print('Player1 -> science:', player1.science)
-    print('Player1 -> action:', player1.action)
-    print('Player1 -> vp:', player1.count_vp())
-    print('Player1 -> resource:', player1.resource)
+    # player2 = Player()
+    # test_card = age_one[2]
+    # print(age_two[10].cost)
+    # print(age_two[10].chain)
+    # print('-----', player1.pick_card(age_one[3], player2))
+    # print('-----', player1.pick_card(age_one[6], player2))
+    # print('-----', player1.pick_card(age_one[12], player2))
+    # print('-----', player1.pick_card(age_one[16], player2))
+    # print('-----', player1.pick_card(age_one[9], player2))
+    # print('-----', player1.pick_card(age_two[10], player2))
+    # # print('-----', player1.pick_card(test_card, player2))
+    #
+    # print('Player1 -> coin:', player1.coin)
+    # print('Player1 -> military:', player1.military)
+    # print('Player1 -> science:', player1.science)
+    # print('Player1 -> action:', player1.action)
+    # print('Player1 -> vp:', player1.count_vp())
+    # print('Player1 -> resource:', player1.resource)
 
     # print('-------------------------------')
 
@@ -161,3 +253,5 @@ if __name__ == '__main__':
     # print('Player2 -> action:', player2.action)
     # print('Player2 -> vp:', player2.count_vp())
     # print('Player2 -> resource:', player2.resource)
+
+    run()
